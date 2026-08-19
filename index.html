@@ -9,56 +9,110 @@
 </head>
 
 <body>
-    <header>
-        <nav aria-label="Navegação principal">
-            <a href="index.html">QUEM SOU EU?</a>
-            <a href="minha-historia.html">MINHA HISTÓRIA</a>
-            <a href="meus-projetos.html">MEUS PROJETOS</a>
-        </nav>
-    </header>
+
+<!-- ========== HEADER ========== -->
 
     <main>
+        <header>
+            <a id="headerMeusProjetos" href="">MEUS PROJETOS</a>
+            <a href="">INSTAGRAM</a>
+            <a href="">LINKEDIN</a>
+            <a href="">GITHUB</a>
+        </header>
+
+<!-- ========== SECTION 1 - APRESENTACAO ========== -->
         
-        <section class="section-tipo-1" aria-label="Quem sou eu?">
-            <article id="quem-sou-eu">
-                <div>
-                    <h1>Thiago Amaral</h1>
+        <section class="sectionApresentacao" aria-label="Quem sou eu?">
 
-                    <p>
-                        Desenvolvedor em formação, apaixonado por tecnologia, disciplina e evolução constante.
-                        Construindo projetos com HTML, CSS e cada vez mais foco em performance e design moderno.
-                    </p>
+            <!-- ~~~~~~~~~ [SECTION CONTEÚDO] ~~~~~~~~~ -->
 
-                    <a id="botao-redes-sociais" href="#botao-redes-sociais">MINHAS REDES SOCIAIS</a>
+            <article id="quemSouEu">
+
+                <div class="quemSouEu-texto">
+
+                    <h1>Thiago<br>Amaral</h1>
+                    <h2>Desenvolvedor</h2>
                             
                 </div>
 
                 <div>
                     <figure>
+
                         <img id="foto_perfil" src="imagens/foto-de-perfil.jpeg" alt="Foto de Thiago Amaral">
+
                     </figure>
-                </div>   
+                </div> 
+                
+                <div id="quemSouEu-softskills">
+                    <ul>
+                        <li><img src="icones/sectionApresentacao/estrela.svg" alt="">ADAPTABILIDADE</li>
+                        <li>PERSISTÊNCIA</li>
+                        <li>ORGANIZACÃO</li>
+                        <li>ADAPTABILIDADE</li>
+                        <li>ADAPTABILIDADE</li>
+                    </ul>
+                </div>
+
             </article>
         </section>
 
-        <section class="section-tipo-2" aria-label="Minhas habilidades">
-            <article id="minhas-habilidades">
+<!-- ========== SECTION 2 - HABILIDADES ========== -->
+
+        <section class="sectionHabilidades" aria-label="Minhas habilidades">
+
+            <!-- ~~~~~~~~~ [SECTION CONTEÚDO] ~~~~~~~~~ -->
+
+            <article id="minhasHabilidades-geral">
 
                 <h2>MINHAS HABILIDADES</h2>
                 
-                <div id="skill-cards">
+                <div id="cardsHabilidade-geral">
                     <div class="skill-card">
                         <img class="habilidades" src="icones/html5.svg" alt="HTML5">
-                        <p>Estou aprendendo a estruturar páginas com HTML5, utilizando tags semânticas para criar layouts organizados, acessíveis e bem estruturados.</p>
+                        <p>Estruturação semântica e organização de interfaces web, com foco em código bem estruturado e acessível.</p>
                     </div>
                 
                     <div class="skill-card">
                         <img class="habilidades" src="icones/css3-alt.svg" alt="CSS3">
-                        <p>Aprendendo a transformar estrutura em design, utilizando CSS para criar layouts responsivos e visualmente organizados.</p>
+                        <p>Construção de interfaces responsivas, trabalhando com layouts, Flexbox, posicionamento, animações e princípios de design.</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <img class="habilidades" src="icones/css3-alt.svg" alt="CSS3">
+                        <p>Aprofundamento dos fundamentos da linguagem, incluindo lógica de programação, funções, objetos, arrays, manipulação do DOM e recursos modernos do JavaScript.</p>
                     </div>
                 </div>
-            </article>
-        </section>
+
+            </section>
+
+<!-- ========== SECTION 3 - FERRAMENTAS ========== -->
+
+        <section class="sectionFerramentas" aria-label="">
+
+            <!-- ~~~~~~~~~ [SECTION CONTEÚDO] ~~~~~~~~~ -->
+
+            <article id="ferramentas-geral">
+
+                <h2>MINHAS HABILIDADES</h2>
+                
+                <div id="cardsFerramentas-geral">
+                    <div class="ferramenta-card">
+                        <img class="ferramenta-img" src="icones/html5.svg" alt="HTML5">
+                        <p>Estruturação semântica e organização de interfaces web, com foco em código bem estruturado e acessível.</p>
+                    </div>
+                
+                    <div class="skill-card">
+                        <img class="ferramenta-img" src="icones/css3-alt.svg" alt="CSS3">
+                        <p>Construção de interfaces responsivas, trabalhando com layouts, Flexbox, posicionamento, animações e princípios de design.</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <img class="ferramenta-img" src="icones/css3-alt.svg" alt="CSS3">
+                        <p>Aprofundamento dos fundamentos da linguagem, incluindo lógica de programação, funções, objetos, arrays, manipulação do DOM e recursos modernos do JavaScript.</p>
+                    </div>
+                </div>
+
+            </section>
 
         <section class="section-tipo-2" aria-label="Minhas redes sociais">
             <article id="minhas-redes-sociais">

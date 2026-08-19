@@ -1,13 +1,11 @@
-/* GERAL */
+/* ========== IMPORTS ========== */
 
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Elms+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-@font-face {
-    font-family: calmserif;
-    src: url('fontes/calm_serif/Calm\ Serif\ \(DemoVersion\).otf') format(opentype);
-}
+/* ========== GERAL SITE ========== */
+
 
 * {
     padding: 0px;
@@ -15,19 +13,19 @@
 }
 
 :root {
-    --fonte1: 'calmserif';
-    --fonte2: 'Quicksand';
+    --fonte1: "Bebas Neue", sans-serif;
+    --fonte2: "Elms Sans", sans-serif;
+    --fonte3: "DM Mono", monospace;
 
-    --cor1: ivory;
-    --cor2: #2a1915;
-    --cor3: #645a4e;
-    --cor4: #130f08;
+    --cor1: #332424;
+    --cor2: #3B2929;
+    --cor3: #6E3737;
+    --cor4: #332E2E;
+    --cor5: #A13030;
 }
 
-/* Tipografia */
-
 h1 {
-    font-size: 55px;
+    font-size: 50px;
     font-family: var(--fonte1);
     font-weight: 900;
 }
@@ -47,142 +45,147 @@ hr {
     color: var(--cor2);
 }
 
-/* SECTION GERAL */
-/* TIPOS DE SECTIONS */
-
-.section-tipo-1 {
-    max-width: 1200px;
-    border: #2a1915 solid;
-    margin: 25px auto;
-    padding: 3%;
-    border-radius: 20px;
-}
-
-.section-tipo-1 p {
-    padding: 10px 0px 10px 0px;
-}
-
-.section-tipo-2 {
-    background-color: var(--cor3);
-    max-width: 100%;
-    border: none;
-    margin: 30px auto;
-    padding: 3% 8%;
-}
-
-.section-tipo-2 h2 {
-    padding-bottom: 15px;
-    color: var(--cor1);
-    text-align: center;
-}
-
-/* BODY */
 body {
-    background-color: var(--cor1);
+    background-color: var(--cor4);
 }
 
-/* HEADER */
+section {
+    max-width: 1200px;
+    justify-self: center;
+}
+/* ========== HEADER ========== */
+
 header {
-    font-family: var(--fonte1);
-    text-align: center;
-    margin: 50px;
-    font-weight: bolder;
-}
-
-nav {
-    display: flex;
-    align-items: center;   /* alinha verticalmente */
-    justify-content: center; /* separa */
-    gap: 20px; /* espaço entre texto e imagem */
+    height: 55px;
+    background-color: var(--cor2);
+    border-bottom: solid 1px #6E3737;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: auto;             
+    gap: 20px;     
+    align-self: center;
 }
 
 header a {
-    background-color: var(--cor3);
-    color: var(--cor1);
+    font-family: var(--fonte3);
     text-decoration: none;
-    padding: 15px 10.3%;
-    text-align: center;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
-    display: inline-block;
-}
-
-header a:hover {
-    background-color: var(--cor2);
-    color: var(--cor1);
-    transform: scale(1.02);
-}
-
-
-
-
-
-
-
-
-/* PÁGINA 1 - QUEM SOU EU? */
-
-/* SECTION 1 - QUEM É THIAGO? */
-/* SECTION CONTEÚDO */
-
-article#quem-sou-eu {
+    color: var(--cor5);
     display: flex;
-    align-items: center;   /* alinha verticalmente */
-    justify-content: space-between; /* separa */
-    gap: 20px; /* espaço entre texto e imagem */
+    justify-content: center;
+    align-items: center;
+}
+
+a#headerMeusProjetos {
+    color: var(--cor2);
+    background-color: var(--cor3);
+    height: 55px;
+}
+
+
+/* ~~~~~~~~~ [HEADER CONTEÚDO] ~~~~~~~~~ */
+
+
+
+h1#quemSouEu-titulo {
+    font-size: 25px;
+    font-family: var(--fonte2);
+    color: var(--cor8);
+}
+
+/* ========== SECTION 1 - APRESENTACAO ========== */
+
+
+.sectionApresentacao {
+    color: var(--cor7);
+    margin: 20px;
+    padding: 3%;
+}
+
+.sectionApresentacao p {
+    padding: 10px 0px 10px 0px;
+}
+
+/* ~~~~~~~~~ [SECTION CONTEÚDO] ~~~~~~~~~ */
+
+article#quemSouEu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: auto;
+    gap: 20px; 
+}
+
+.quemSouEu-texto {
+    place-self: center;
+    color: var(--cor5);
+}
+
+.quemSouEu-texto h1 {
+font-size: 100px;
+line-height: 80px;
+}
+
+.quemSouEu-texto h2 {
+    margin-top: -30px;
+font-size: 30px;
+line-height: 80px;
+letter-spacing: 4px;
+font-weight: 200;
 }
 
 img#foto_perfil {
     width: 400px;
     height: 400px;
     border-radius: 10px;
-    margin-bottom: 7px;
 }
 
-
-.icon {
-    padding: 15px 20px 0px 0px;
-    width: 24px;
-    transition: transform 0.3s ease;
-    display: inline-block;
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    grid-template-rows: auto;
+padding: 10px 0px;
+    gap: 20px; 
 }
 
-.icon:hover {
-    transform: scale(1.3);
+div#quemSouEu-softskills {
+    height: 50px;
+    grid-column: 1 / -1;
+    border: solid 1px #6E3737;
 }
 
+/* ========== SECTION 2 - HABILIDADES ========== */
 
-#botao-redes-sociais {
-    background-color: var(--cor3);
-    color: var(--cor1);
-    text-decoration: none;
-    padding: 15px 10.3%;
-    margin-top: 20px;
+.sectionHabilidades {
+    background-color: var(--cor5);
+    max-width: 100%;
+    border: none;
+    margin: 30px auto;
+    padding: 3% 8%;
+}
+
+.sectionHabilidades h2 {
+    padding-bottom: 15px;
+    color: var(--cor8);
     text-align: center;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
-    display: inline-block;
 }
 
-#botao-redes-sociais:hover {
-    background-color: var(--cor2);
-    color: var(--cor1);
-    transform: scale(1.02);
-}
 
-/* SECTION 2 - MINHAS HABILIDADES */
-/* SECTION CONTEÚDO */
 
-article#minhas-habilidades {
+
+/* ~~~~~~~~~ [SECTION CONTEÚDO] ~~~~~~~~~ */
+
+article#minhasHabilidades-geral {
     display: block;
 }
-#minhas-habilidades h2 {
+#minhasHabilidades-geral h2 {
     padding-bottom: 15px;
     color: var(--cor1);
     text-align: center;
 }
 
-article#minhas-habilidades #skill-cards {
+article#minhasHabilidades-geral #cardsHabilidade-geral {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -196,7 +199,7 @@ article#minhas-habilidades #skill-cards {
     justify-content: center;
     margin: 0px;
     gap: 75px;
-    background-color: var(--cor1);
+    background-color: var(--cor8);
     padding: 40px 20px;
     width: 570px;
     height: 270px;
@@ -209,7 +212,68 @@ article#minhas-habilidades #skill-cards {
     margin-bottom: 0px;
 }
 
-article#minhas-habilidades .habilidades {
+article#minhasHabilidades-geral .habilidades {
+    height: 150px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ========== SECTION 3 - FERRAMENTAS ========== */
+
+.sectionFerramentas {
+    background-color: var(--cor6);
+    max-width: 100%;
+    border: none;
+    margin: 30px auto;
+    padding: 3% 8%;
+}
+
+.sectionFerramentas h2 {
+    padding-bottom: 15px;
+    color: var(--cor8);
+    text-align: center;
+}
+
+/* ~~~~~~~~~ [SECTION CONTEÚDO] ~~~~~~~~~ */
+
+article#ferramentas-geral {
+    display: block;
+}
+#ferramentas-geral h2 {
+    padding-bottom: 15px;
+    color: var(--cor1);
+    text-align: center;
+}
+
+article#ferramentas-geral #cardsFerramentas-geral {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0px;
+    gap: 35px;
+}
+
+.ferramenta-card {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    gap: 75px;
+    background-color: var(--cor8);
+    padding: 40px 20px;
+    width: 570px;
+    height: 270px;
+    border-radius: 20px;
+}
+
+.ferramenta-card > p {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 0px;
+}
+
+article#cardsFerramentas-geral .ferramenta-img {
     height: 150px;
     display: flex;
     margin-left: auto;
