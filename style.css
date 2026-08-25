@@ -22,6 +22,7 @@
     --cor3: #6E3737;
     --cor4: #332E2E;
     --cor5: #A13030;
+    --cor6: #fde9e9;
 }
 
 h1 {
@@ -99,6 +100,7 @@ h1#quemSouEu-titulo {
     color: var(--cor7);
     margin: 20px;
     padding: 3%;
+    height: 590px;
 }
 
 .sectionApresentacao p {
@@ -120,16 +122,16 @@ article#quemSouEu {
 }
 
 .quemSouEu-texto h1 {
-font-size: 100px;
-line-height: 80px;
+    font-size: 100px;
+    line-height: 80px;
 }
 
 .quemSouEu-texto h2 {
     margin-top: -30px;
-font-size: 30px;
-line-height: 80px;
-letter-spacing: 4px;
-font-weight: 200;
+    font-size: 30px;
+    line-height: 80px;
+    letter-spacing: 4px;
+    font-weight: 200;
 }
 
 img#foto_perfil {
@@ -138,41 +140,65 @@ img#foto_perfil {
     border-radius: 10px;
 }
 
+div#quemSouEu-softskills {
+    height: 50px;
+    grid-column: 1 / -1;
+    border: solid 1px #6E3737;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding: 0px 20px;
+}
+
 ul {
-    list-style-type: none;
+    list-style: none; /* Remove a bolinha padrão */
     margin: 0;
     padding: 0;
     display: grid;
     grid-template-columns: repeat(5, 1fr); 
     grid-template-rows: auto;
-padding: 10px 0px;
+    padding: 0px 0px;
     gap: 20px; 
+    font-family: var(--fonte2);
+    color: rgb(195, 176, 176);
+
 }
 
-div#quemSouEu-softskills {
-    height: 50px;
-    grid-column: 1 / -1;
-    border: solid 1px #6E3737;
+li {
+  display: flex;
+  align-items: center; 
+  margin-bottom: 0px; 
 }
+
+li::before {
+  content: "";
+  display: inline-block;
+  width: 20px;  
+  height: 20px; 
+  background-image: url('icones/sectionApresentacao/estrela.svg');
+  background-size: contain; 
+  background-repeat: no-repeat;
+  margin-right: 12px; 
+}
+
+
 
 /* ========== SECTION 2 - HABILIDADES ========== */
 
 .sectionHabilidades {
     background-color: var(--cor5);
-    max-width: 100%;
     border: none;
     margin: 30px auto;
     padding: 3% 8%;
 }
 
-.sectionHabilidades h2 {
+article#minhasHabilidades-geral h2 {
+    font-size: 30px;
     padding-bottom: 15px;
-    color: var(--cor8);
+    color: var(--cor6);
     text-align: center;
+    font-family: var(--fonte1);
 }
-
-
-
 
 /* ~~~~~~~~~ [SECTION CONTEÚDO] ~~~~~~~~~ */
 
@@ -185,7 +211,7 @@ article#minhasHabilidades-geral {
     text-align: center;
 }
 
-article#minhasHabilidades-geral #cardsHabilidade-geral {
+article#minhasHabilidades-geral #cardsHabilidade-geralG {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -199,11 +225,12 @@ article#minhasHabilidades-geral #cardsHabilidade-geral {
     justify-content: center;
     margin: 0px;
     gap: 75px;
-    background-color: var(--cor8);
     padding: 40px 20px;
     width: 570px;
-    height: 270px;
-    border-radius: 20px;
+    height: 250px;
+    color: var(--cor6);
+    border: 2px solid var(--cor6);
+    
 }
 
 .skill-card > p {
@@ -213,213 +240,92 @@ article#minhasHabilidades-geral #cardsHabilidade-geral {
 }
 
 article#minhasHabilidades-geral .habilidades {
-    height: 150px;
+    height: 80px;
+    width: 80px;
     display: flex;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* ========== SECTION 3 - FERRAMENTAS ========== */
-
-.sectionFerramentas {
+div#cardsFerramentas {
     background-color: var(--cor6);
-    max-width: 100%;
-    border: none;
-    margin: 30px auto;
-    padding: 3% 8%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0px 30px;
+    margin: 30px 0px 0px 0px;
+    gap: 30px;
 }
 
-.sectionFerramentas h2 {
+article#minhasHabilidades-geral .ferramentas {
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-self: space-between ;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ========== SECTION 3 - SOBRE MIM ========== */
+
+.sectionSobreMim {
+    color: var(--cor7);
+    width: 100%;
+    height: 590px;
+    padding: 1.3% 8%;
+
+}
+
+article#sobreMim-geral h2 {
+    font-size: 30px;
     padding-bottom: 15px;
-    color: var(--cor8);
+    color: var(--cor6);
     text-align: center;
+    font-family: var(--fonte1);
 }
 
 /* ~~~~~~~~~ [SECTION CONTEÚDO] ~~~~~~~~~ */
 
-article#ferramentas-geral {
+article#sobreMim-geral {
     display: block;
 }
-#ferramentas-geral h2 {
-    padding-bottom: 15px;
-    color: var(--cor1);
-    text-align: center;
-}
 
-article#ferramentas-geral #cardsFerramentas-geral {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+p#sobreMim-texto {
+    color: var(--cor6);
+    font-family: var(--fonte2);
+    letter-spacing: 0.15em;
+    text-align: justify;
     margin: 20px 0px;
-    gap: 35px;
+    font-weight: 100;
 }
 
-.ferramenta-card {
-    display: block;
-    align-items: center;
-    justify-content: center;
-    margin: 0px;
-    gap: 75px;
-    background-color: var(--cor8);
-    padding: 40px 20px;
-    width: 570px;
-    height: 270px;
-    border-radius: 20px;
+p#sobreMim-texto strong {
+    font-weight: 650;
 }
 
-.ferramenta-card > p {
-    text-align: center;
-    margin-top: 25px;
-    margin-bottom: 0px;
+div#minhaFormacaoAcademica {
+    padding: 20px 0px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); 
+    grid-template-rows: 2;
 }
 
-article#cardsFerramentas-geral .ferramenta-img {
-    height: 150px;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
+div#UCB-logo {
+    justify-self: center;
+    align-self: center;
+}
+.UCB-image {
+    width: 400px;
 }
 
-/* SECTION 3 - MINHAS REDES SOCIAIS */
-/* CONTEÚDO */
+div#semestreUCB {
+    justify-self: center;
+    align-self: center;
+    background-color: var(--cor5);
+    width: 400px;
 
-article#minhas-redes-sociais {
-    display: block;
-}
-
-article#minhas-redes-sociais #redes-sociais-cards {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px 0px;
-    gap: 35px;
-}
-.redes-sociais-cards {
-    display: block;
-    align-items: center;
-    justify-content: center;
-    margin: 0px;
-    gap: 75px;
-    background-color: var(--cor1);
-    padding: 40px 20px;
-    width: 200px;
-    height: 100px;
-    border-radius: 20px;
-}
-
-.redes-sociais-cards > p {
-    text-align: center;
-    margin-top: 25px;
-    margin-bottom: 0px;
-}
-
-article#minhas-redes-sociais .redes-sociais-icons {
-    height: 50px;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.redes-sociais-link {
-    color: var(--cor3);
-    text-decoration: none;
-    transition: transform 0.3s ease;
-    
-}
-
-.redes-sociais-link:hover {
-    color: var(--cor4);
-    transform: scale(1.01);
-}
-
-
-
-
-
-
-
-
-
-/* PÁGINA 2 - MINHA HISTÓRIA? */
-/* SECTION - MINHA HISTÓRIA */
-
-.minhas-informacoes {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    margin: 20px auto;
-    gap: 10px;
-    background-color: var(--cor1);
-    padding: 40px 20px;
-    width: 1200px;
-    height: 60px;
-    border-radius: 20px;
-}
-
-.history-cards > p {
-    text-align: center;
-    margin-top: 25px;
-    margin-bottom: 0px;
-}
-
-.section-tipo-2 .icon-historia {
-  height: 30px;
-  display: flex;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-
-
-
-
-
-
-
-
-
-/* PÁGINA 3 - MEUS PROJETOS */
-/* SECTION - MINHA HISTÓRIA */
-
-.section-tipo-1 #projetos-cards {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px 0px;
-    gap: 35px;
-}
-
-.projetos-cards {
-    display: block;
-    align-items: center;
-    justify-content: center;
-    margin: 20px 0px;
-    gap: 75px;
-}
-
-article#article-meus-projetos h2 {
-    text-align: center;
-}
-
-.projetos-cards > p {
-    text-align: center;
-    margin-top: 25px;
-    margin-bottom: 0px;
-}
-
-.section-tipo-1 .projetos-thumbs {
-    height: 200px;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 20px;
-    box-shadow: 0px 2px 5px 3px #52522657;
 
 }
-
-
-
-
 
 
 
