@@ -122,8 +122,8 @@ article#quemSouEu {
 }
 
 .quemSouEu-texto h1 {
-    font-size: 100px;
-    line-height: 80px;
+    font-size: 180px;
+    line-height: 150px;
 }
 
 .quemSouEu-texto h2 {
@@ -140,6 +140,10 @@ img#foto_perfil {
     border-radius: 10px;
 }
 
+article#quemSouEu figure {
+    justify-self: center;
+}
+
 div#quemSouEu-softskills {
     height: 50px;
     grid-column: 1 / -1;
@@ -151,7 +155,7 @@ div#quemSouEu-softskills {
 }
 
 ul {
-    list-style: none; /* Remove a bolinha padrão */
+    list-style: none; 
     margin: 0;
     padding: 0;
     display: grid;
@@ -179,6 +183,27 @@ li::before {
   background-size: contain; 
   background-repeat: no-repeat;
   margin-right: 12px; 
+}
+
+#quemSou-JS {
+    min-height: 130px; /* ajuste conforme o tamanho da sua fonte */
+    display: inline-block; /* garante que min-height funcione mesmo em elementos inline */
+}
+
+#quemSou-JS::after{
+    content: '|';
+    margin-left: 0px;
+    opacity: 1;
+    animation: pisca .3s infinite;
+}
+
+@keyframes pisca {
+    0%,100% {
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }    
 }
 
 
@@ -230,6 +255,15 @@ article#minhasHabilidades-geral #cardsHabilidade-geralG {
     height: 250px;
     color: var(--cor6);
     border: 2px solid var(--cor6);
+    background-color: var(--cor5);
+
+    transition: box-shadow 0.3s ease;
+
+    
+}
+
+.skill-card:hover {
+box-shadow: #460000bb 0px 0px 10px;
     
 }
 
@@ -344,7 +378,7 @@ div#semestreUCB p {
 .sectionMeusProjetos {
     color: var(--cor6);
     width: 100%;
-    height: 840px;
+    height: 640px;
     padding: 1.3% 8%;
     background-color: var(--cor5);
 
@@ -361,14 +395,22 @@ article#meusProjetos-geral h2 {
 /* ~~~~~~~~~ [SECTION CONTEÚDO] ~~~~~~~~~ */
 
 div#projetosCardsArea {
-display: grid;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: auto;             
+    gap: 20px;     
+    align-self: center;
 }
 
 .projeto-card {
     border: solid 1px var(--cor6);
-    padding: 10px;
     width: 250px;
     height: 470px;
+    position: relative; /* Obrigatório para a filha se alinhar a ela */
+    min-height: 300px;  /* Altura da sua div principal */
+    padding: 20px;
+
+    transition: background-color 0.3s ease;
 }
 
 .projeto-card h3 {
@@ -377,8 +419,10 @@ display: grid;
     padding: 15px 0px;
 }
 
-div#meusProjetos-ver {
-    width: 250px;
+.projeto-card a {
+    text-decoration: none;
+    color: var(--cor5);
+    width: 260px;
     height: 38px;
     background-color: var(--cor6);
     font-size: 15px;
@@ -386,13 +430,14 @@ div#meusProjetos-ver {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    position: absolute;
+    bottom: 15px; /* Afasta 15px do fundo da div mãe */
+    left: 15px;   /* Afasta 15px da esquerda da div mãe */
+    right: 15px;  /* Afasta 15px da direita da div mãe */
 
-div#meusProjetos-ver a {
-    text-decoration: none;
-    color: var(--cor5);
-}
+    transition: background-color 0.3s ease;
 
+}
 
 p#meusProjetos-linguagemUsada {
     padding: 15px 0px;
@@ -401,60 +446,27 @@ p#meusProjetos-linguagemUsada {
 
 .meusProjetos-image {
     width: 250px;
+    height: 150px;
 }
 
-article#sobreMim-geral {
-    display: block;
+/* ~~~~~~~~~ [HOVER] ~~~~~~~~~ */
+
+.projeto-card:hover {
+    background-color: var(--cor6);
+    color: #332424;
 }
 
-p#sobreMim-texto {
-    color: var(--cor6);
-    font-family: var(--fonte2);
-    letter-spacing: 0.15em;
-    text-align: justify;
-    margin: 20px 0px;
-    font-weight: 100;
-}
-
-p#sobreMim-texto strong {
-    font-weight: 650;
-}
-
-div#minhaFormacaoAcademica {
-    padding: 20px 0px;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr); 
-    grid-template-rows: 2;
-}
-
-div#UCB-logo {
-    justify-self: center;
-    align-self: center;
-}
-.UCB-image {
-    width: 400px;
-}
-
-div#semestreUCB {
-    display: flex;
-    justify-self: center;
-    align-self: center;
-    background-color: var(--cor5);
-    width: 400px;
-}
-
-div#semestreUCB p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--cor5);
-    width: 400px;
-    letter-spacing: 0.8em;
-    font-weight: 800;
-    padding: 10px 0px;
-    margin: -4px 0px 0px 0px;
+.projeto-card:hover a{
+    background-color: var(--cor1);
     color: var(--cor6);
 }
+
+.projeto-card a:hover {
+
+    color: var(--cor6);
+    background-color: var(--cor3);
+}
+
 
 /* RODAPÉ */
 
